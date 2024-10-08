@@ -1,11 +1,147 @@
+<!DOCTYPE html>
 <html lang="en">
-<head>      
+<head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=
-    , initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>50 Symbol Names</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f9fc;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: 50px auto;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
 </head>
 <body>
-    <h1>Hello World</h1>
+    <div class="container">
+        <h1>List of 50 Symbols and Their English Names</h1>
+        <table id="symbolTable">
+            <thead>
+                <tr>
+                    <th>Symbol</th>
+                    <th>Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Table rows will be inserted here using JavaScript -->
+            </tbody>
+        </table>
+    </div>
+    <script>
+        // Array of 50 symbols and their English names
+        const symbols = [
+            ["@", "At symbol"],
+            ["#", "Hash, Number sign, or Pound"],
+            ["$", "Dollar sign"],
+            ["%", "Percent sign"],
+            ["&", "Ampersand"],
+            ["+", "Plus sign"],
+            ["=", "Equals sign"],
+            ["!", "Exclamation mark"],
+            ["?", "Question mark"],
+            ["^", "Caret"],
+            ["~", "Tilde"],
+            ["*", "Asterisk"],
+            ["_", "Underscore"],
+            ["-", "Hyphen or Minus sign"],
+            ["/", "Slash or Forward slash"],
+            ["\\", "Backslash"],
+            ["|", "Vertical bar or Pipe"],
+            ["<", "Less than"],
+            [">", "Greater than"],
+            ["( )", "Parentheses"],
+            ["{ }", "Curly braces"],
+            ["[ ]", "Square brackets"],
+            ['" "', "Quotation marks"],
+            ["‘ ’", "Single quotation marks"],
+            ["'", "Apostrophe"],
+            [";", "Semicolon"],
+            [":", "Colon"],
+            [".", "Period or Full stop"],
+            [",", "Comma"],
+            ["`", "Grave accent"],
+            ["°", "Degree symbol"],
+            ["§", "Section sign"],
+            ["©", "Copyright symbol"],
+            ["®", "Registered trademark"],
+            ["™", "Trademark symbol"],
+            ["€", "Euro symbol"],
+            ["£", "Pound Sterling symbol"],
+            ["¥", "Yen symbol"],
+            ["₹", "Rupee symbol"],
+            ["¢", "Cent sign"],
+            ["†", "Dagger or Obelisk"],
+            ["‡", "Double dagger"],
+            ["¶", "Pilcrow or Paragraph sign"],
+            ["∞", "Infinity symbol"],
+            ["µ", "Micro symbol"],
+            ["÷", "Division sign"],
+            ["±", "Plus-minus sign"],
+            ["∑", "Summation symbol"],
+            ["∫", "Integral symbol"],
+            ["≈", "Approximately equal to"]
+        ];
+
+        // Function to populate the table with symbols and names
+        function populateTable() {
+            const tableBody = document.querySelector("#symbolTable tbody");
+            
+            // Clear existing rows (if any)
+            tableBody.innerHTML = "";
+
+            // Loop through symbols array and create table rows
+            symbols.forEach(symbol => {
+                const row = document.createElement("tr");
+                
+                // Create Symbol cell
+                const symbolCell = document.createElement("td");
+                symbolCell.textContent = symbol[0];
+                row.appendChild(symbolCell);
+
+                // Create Name cell
+                const nameCell = document.createElement("td");
+                nameCell.textContent = symbol[1];
+                row.appendChild(nameCell);
+
+                // Append row to table body
+                tableBody.appendChild(row);
+            });
+        }
+
+        // Run the function on page load
+        window.onload = populateTable;
+    </script>
 </body>
 </html>
